@@ -76,6 +76,8 @@ export const PORTFOLIO_SNAPSHOT_COMPUTATION_QUEUE_PRIORITY_LOW =
   Number.MAX_SAFE_INTEGER;
 
 export const DEFAULT_CURRENCY = 'USD';
+
+export const FUZZY_SEARCH_THRESHOLD = 0.3;
 export const DEFAULT_DATE_FORMAT_MONTH_YEAR = 'MMM yyyy';
 export const DEFAULT_HOST = '0.0.0.0';
 export const DEFAULT_LANGUAGE_CODE = 'en';

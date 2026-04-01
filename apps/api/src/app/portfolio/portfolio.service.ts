@@ -32,6 +32,7 @@ import {
 } from '@ghostfolio/common/calculation-helper';
 import {
   DEFAULT_CURRENCY,
+  FUZZY_SEARCH_THRESHOLD,
   TAG_ID_EMERGENCY_FUND,
   TAG_ID_EXCLUDE_FROM_ANALYSIS,
   UNKNOWN_KEY
@@ -271,7 +272,7 @@ export class PortfolioService {
     if (searchQuery) {
       const fuse = new Fuse(accounts, {
         keys: ['name', 'platform.name'],
-        threshold: 0.3
+        threshold: FUZZY_SEARCH_THRESHOLD
       });
 
       accounts = fuse.search(searchQuery).map(({ item }) => {
@@ -373,7 +374,7 @@ export class PortfolioService {
     if (searchQuery) {
       const fuse = new Fuse(holdings, {
         keys: ['isin', 'name', 'symbol'],
-        threshold: 0.3
+        threshold: FUZZY_SEARCH_THRESHOLD
       });
 
       holdings = fuse.search(searchQuery).map(({ item }) => {

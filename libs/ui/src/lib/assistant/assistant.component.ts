@@ -1,3 +1,4 @@
+import { FUZZY_SEARCH_THRESHOLD } from '@ghostfolio/common/config';
 import { getAssetProfileIdentifier } from '@ghostfolio/common/helper';
 import { Filter, PortfolioPosition, User } from '@ghostfolio/common/interfaces';
 import { InternalRoute } from '@ghostfolio/common/routes/interfaces/internal-route.interface';
@@ -735,7 +736,7 @@ export class GfAssistantComponent implements OnChanges, OnDestroy, OnInit {
 
     const fuse = new Fuse(allRoutes, {
       keys: ['title'],
-      threshold: 0.3
+      threshold: FUZZY_SEARCH_THRESHOLD
     });
 
     return fuse.search(searchTerm).map(({ item: { routerLink, title } }) => {
