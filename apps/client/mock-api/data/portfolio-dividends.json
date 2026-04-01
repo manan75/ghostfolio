@@ -1,0 +1,17 @@
+{
+  "dividends": [
+    { "date": "2022-03-15", "investment": 11.5 },
+    { "date": "2022-06-15", "investment": 11.5 },
+    { "date": "2022-09-15", "investment": 11.5 },
+    { "date": "2022-12-15", "investment": 11.5 },
+    { "date": "2023-01-15", "investment": 80 },
+    { "date": "2023-03-15", "investment": 91.5 },
+    { "date": "2023-04-15", "investment": 80 },
+    { "date": "2023-06-15", "investment": 105.5 },
+    { "date": "2023-07-15", "investment": 80 },
+    { "date": "2023-09-15", "investment": 105.5 },
+    { "date": "2023-10-15", "investment": 80 },
+    { "date": "2023-12-15", "investment": 105.5 },
+    { "date": "2024-01-15", "investment": 80 }
+  ]
+}

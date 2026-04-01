@@ -1,0 +1,5 @@
+[
+  { "id": "mock-tag-us", "name": "US Stock", "userId": "mock-user-id" },
+  { "id": "mock-tag-crypto", "name": "Crypto", "userId": "mock-user-id" },
+  { "id": "mock-tag-retirement", "name": "Retirement", "userId": "mock-user-id" }
+]

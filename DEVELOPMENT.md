@@ -38,6 +38,24 @@ Run `npm run start:client` and open https://localhost:4200/en in your browser.
 
 To start the client in a different language, such as German (`de`), adapt the `start:client` script in the `package.json` file by changing `--configuration=development-en` to `--configuration=development-de`. Then, run `npm run start:client` and open https://localhost:4200/de in your browser.
 
+### Start Client with Mock API (No Backend Required)
+
+If you want to explore the frontend without setting up PostgreSQL, Redis, or any environment variables (`ACCESS_TOKEN_SALT`, `JWT_SECRET_KEY`, etc.), you can use the mock API server:
+
+```bash
+npm run start:client:mock
+```
+
+This starts a lightweight mock API server on port 3333 alongside the Angular dev server. The mock API serves notional data (a sample portfolio with US stocks, international ETFs, bonds, and cryptocurrency) so all pages render with realistic content.
+
+You can also start the mock API server independently:
+
+```bash
+npm run start:mock-api
+```
+
+The mock data fixtures are located in `apps/client/mock-api/data/` and can be customized to suit your needs. Write operations (create, update, delete) are accepted but do not persist — the mock server is read-only by design.
+
 ### Start _Storybook_
 
 Run `npm run start:storybook`

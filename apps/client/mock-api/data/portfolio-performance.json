@@ -1,0 +1,41 @@
+{
+  "chart": [
+    { "date": "2022-01-15", "netWorth": 7500, "totalInvestment": 7500, "netPerformanceInPercentage": 0, "netPerformanceWithCurrencyEffect": 0, "value": 7500 },
+    { "date": "2022-02-15", "netWorth": 7800, "totalInvestment": 7500, "netPerformanceInPercentage": 0.04, "netPerformanceWithCurrencyEffect": 300, "value": 7800 },
+    { "date": "2022-03-15", "netWorth": 16000, "totalInvestment": 15500, "netPerformanceInPercentage": 0.032, "netPerformanceWithCurrencyEffect": 500, "value": 16000 },
+    { "date": "2022-04-15", "netWorth": 15500, "totalInvestment": 15500, "netPerformanceInPercentage": 0, "netPerformanceWithCurrencyEffect": 0, "value": 15500 },
+    { "date": "2022-05-15", "netWorth": 15200, "totalInvestment": 15500, "netPerformanceInPercentage": -0.019, "netPerformanceWithCurrencyEffect": -300, "value": 15200 },
+    { "date": "2022-06-15", "netWorth": 21000, "totalInvestment": 20500, "netPerformanceInPercentage": 0.024, "netPerformanceWithCurrencyEffect": 500, "value": 21000 },
+    { "date": "2022-07-15", "netWorth": 21500, "totalInvestment": 20500, "netPerformanceInPercentage": 0.049, "netPerformanceWithCurrencyEffect": 1000, "value": 21500 },
+    { "date": "2022-08-15", "netWorth": 20800, "totalInvestment": 20500, "netPerformanceInPercentage": 0.015, "netPerformanceWithCurrencyEffect": 300, "value": 20800 },
+    { "date": "2022-09-15", "netWorth": 41000, "totalInvestment": 40500, "netPerformanceInPercentage": 0.012, "netPerformanceWithCurrencyEffect": 500, "value": 41000 },
+    { "date": "2022-10-15", "netWorth": 39500, "totalInvestment": 40500, "netPerformanceInPercentage": -0.025, "netPerformanceWithCurrencyEffect": -1000, "value": 39500 },
+    { "date": "2022-11-15", "netWorth": 40000, "totalInvestment": 40500, "netPerformanceInPercentage": -0.012, "netPerformanceWithCurrencyEffect": -500, "value": 40000 },
+    { "date": "2022-12-15", "netWorth": 40200, "totalInvestment": 40500, "netPerformanceInPercentage": -0.007, "netPerformanceWithCurrencyEffect": -300, "value": 40200 },
+    { "date": "2023-01-15", "netWorth": 52500, "totalInvestment": 51500, "netPerformanceInPercentage": 0.019, "netPerformanceWithCurrencyEffect": 1000, "value": 52500 },
+    { "date": "2023-02-15", "netWorth": 53000, "totalInvestment": 51500, "netPerformanceInPercentage": 0.029, "netPerformanceWithCurrencyEffect": 1500, "value": 53000 },
+    { "date": "2023-03-15", "netWorth": 51000, "totalInvestment": 51500, "netPerformanceInPercentage": -0.01, "netPerformanceWithCurrencyEffect": -500, "value": 51000 },
+    { "date": "2023-04-15", "netWorth": 52000, "totalInvestment": 51500, "netPerformanceInPercentage": 0.01, "netPerformanceWithCurrencyEffect": 500, "value": 52000 },
+    { "date": "2023-05-20", "netWorth": 58000, "totalInvestment": 56600, "netPerformanceInPercentage": 0.025, "netPerformanceWithCurrencyEffect": 1400, "value": 58000 },
+    { "date": "2023-06-15", "netWorth": 60000, "totalInvestment": 56600, "netPerformanceInPercentage": 0.06, "netPerformanceWithCurrencyEffect": 3400, "value": 60000 },
+    { "date": "2023-07-15", "netWorth": 62000, "totalInvestment": 56600, "netPerformanceInPercentage": 0.095, "netPerformanceWithCurrencyEffect": 5400, "value": 62000 },
+    { "date": "2023-08-15", "netWorth": 72000, "totalInvestment": 65600, "netPerformanceInPercentage": 0.098, "netPerformanceWithCurrencyEffect": 6400, "value": 72000 },
+    { "date": "2023-09-15", "netWorth": 68000, "totalInvestment": 65600, "netPerformanceInPercentage": 0.037, "netPerformanceWithCurrencyEffect": 2400, "value": 68000 },
+    { "date": "2023-10-15", "netWorth": 65000, "totalInvestment": 65600, "netPerformanceInPercentage": -0.009, "netPerformanceWithCurrencyEffect": -600, "value": 65000 },
+    { "date": "2023-11-15", "netWorth": 67000, "totalInvestment": 65600, "netPerformanceInPercentage": 0.021, "netPerformanceWithCurrencyEffect": 1400, "value": 67000 },
+    { "date": "2023-12-15", "netWorth": 69000, "totalInvestment": 65600, "netPerformanceInPercentage": 0.052, "netPerformanceWithCurrencyEffect": 3400, "value": 69000 },
+    { "date": "2024-01-15", "netWorth": 70000, "totalInvestment": 65600, "netPerformanceInPercentage": 0.067, "netPerformanceWithCurrencyEffect": 4400, "value": 70000 }
+  ],
+  "firstOrderDate": "2022-01-15T00:00:00.000Z",
+  "performance": {
+    "annualizedPerformancePercent": 0.052,
+    "currentNetWorth": 70000,
+    "currentValueInBaseCurrency": 55000,
+    "netPerformance": -10608.5,
+    "netPerformancePercentage": -0.1601,
+    "netPerformancePercentageWithCurrencyEffect": -0.1608,
+    "netPerformanceWithCurrencyEffect": -10658.5,
+    "totalInvestment": 65600,
+    "totalInvestmentValueWithCurrencyEffect": 65600
+  }
+}

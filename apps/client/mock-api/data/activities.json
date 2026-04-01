@@ -1,0 +1,314 @@
+{
+  "activities": [
+    {
+      "accountId": "mock-account-checking",
+      "comment": null,
+      "createdAt": "2022-01-15T00:00:00.000Z",
+      "date": "2022-01-15T00:00:00.000Z",
+      "fee": 1,
+      "id": "mock-activity-1",
+      "isDraft": false,
+      "quantity": 50,
+      "type": "BUY",
+      "unitPrice": 150,
+      "updatedAt": "2022-01-15T00:00:00.000Z",
+      "Account": {
+        "id": "mock-account-checking",
+        "name": "Interactive Brokers",
+        "Platform": {
+          "id": "mock-platform-ibkr",
+          "name": "Interactive Brokers",
+          "url": "https://www.interactivebrokers.com"
+        }
+      },
+      "SymbolProfile": {
+        "assetClass": "EQUITY",
+        "assetSubClass": "STOCK",
+        "comment": null,
+        "countries": [{ "code": "US", "continent": "North America", "name": "United States", "weight": 1 }],
+        "currency": "USD",
+        "dataSource": "YAHOO",
+        "holdings": [],
+        "name": "Apple Inc.",
+        "sectors": [{ "name": "Technology", "weight": 1 }],
+        "symbol": "AAPL",
+        "url": "https://finance.yahoo.com/quote/AAPL"
+      },
+      "tags": [{ "id": "mock-tag-us", "name": "US Stock" }],
+      "value": 7500,
+      "valueInBaseCurrency": 7500
+    },
+    {
+      "accountId": "mock-account-checking",
+      "comment": null,
+      "createdAt": "2022-03-10T00:00:00.000Z",
+      "date": "2022-03-10T00:00:00.000Z",
+      "fee": 1,
+      "id": "mock-activity-2",
+      "isDraft": false,
+      "quantity": 20,
+      "type": "BUY",
+      "unitPrice": 400,
+      "updatedAt": "2022-03-10T00:00:00.000Z",
+      "Account": {
+        "id": "mock-account-checking",
+        "name": "Interactive Brokers",
+        "Platform": {
+          "id": "mock-platform-ibkr",
+          "name": "Interactive Brokers",
+          "url": "https://www.interactivebrokers.com"
+        }
+      },
+      "SymbolProfile": {
+        "assetClass": "EQUITY",
+        "assetSubClass": "ETF",
+        "comment": null,
+        "countries": [{ "code": "US", "continent": "North America", "name": "United States", "weight": 1 }],
+        "currency": "USD",
+        "dataSource": "YAHOO",
+        "holdings": [],
+        "name": "Vanguard S&P 500 ETF",
+        "sectors": [],
+        "symbol": "VOO",
+        "url": "https://finance.yahoo.com/quote/VOO"
+      },
+      "tags": [{ "id": "mock-tag-us", "name": "US Stock" }],
+      "value": 8000,
+      "valueInBaseCurrency": 8000
+    },
+    {
+      "accountId": "mock-account-checking",
+      "comment": null,
+      "createdAt": "2022-06-01T00:00:00.000Z",
+      "date": "2022-06-01T00:00:00.000Z",
+      "fee": 1,
+      "id": "mock-activity-3",
+      "isDraft": false,
+      "quantity": 100,
+      "type": "BUY",
+      "unitPrice": 50,
+      "updatedAt": "2022-06-01T00:00:00.000Z",
+      "Account": {
+        "id": "mock-account-checking",
+        "name": "Interactive Brokers",
+        "Platform": {
+          "id": "mock-platform-ibkr",
+          "name": "Interactive Brokers",
+          "url": "https://www.interactivebrokers.com"
+        }
+      },
+      "SymbolProfile": {
+        "assetClass": "EQUITY",
+        "assetSubClass": "ETF",
+        "comment": null,
+        "countries": [
+          { "code": "JP", "continent": "Asia", "name": "Japan", "weight": 0.15 },
+          { "code": "GB", "continent": "Europe", "name": "United Kingdom", "weight": 0.1 },
+          { "code": "DE", "continent": "Europe", "name": "Germany", "weight": 0.08 },
+          { "code": "FR", "continent": "Europe", "name": "France", "weight": 0.07 }
+        ],
+        "currency": "USD",
+        "dataSource": "YAHOO",
+        "holdings": [],
+        "name": "Vanguard FTSE Developed Markets ETF",
+        "sectors": [],
+        "symbol": "VEA",
+        "url": "https://finance.yahoo.com/quote/VEA"
+      },
+      "tags": [],
+      "value": 5000,
+      "valueInBaseCurrency": 5000
+    },
+    {
+      "accountId": "mock-account-checking",
+      "comment": null,
+      "createdAt": "2022-09-15T00:00:00.000Z",
+      "date": "2022-09-15T00:00:00.000Z",
+      "fee": 1,
+      "id": "mock-activity-4",
+      "isDraft": false,
+      "quantity": 200,
+      "type": "BUY",
+      "unitPrice": 100,
+      "updatedAt": "2022-09-15T00:00:00.000Z",
+      "Account": {
+        "id": "mock-account-checking",
+        "name": "Interactive Brokers",
+        "Platform": {
+          "id": "mock-platform-ibkr",
+          "name": "Interactive Brokers",
+          "url": "https://www.interactivebrokers.com"
+        }
+      },
+      "SymbolProfile": {
+        "assetClass": "EQUITY",
+        "assetSubClass": "ETF",
+        "comment": null,
+        "countries": [{ "code": "US", "continent": "North America", "name": "United States", "weight": 1 }],
+        "currency": "USD",
+        "dataSource": "YAHOO",
+        "holdings": [],
+        "name": "Vanguard Total Bond Market ETF",
+        "sectors": [],
+        "symbol": "BND",
+        "url": "https://finance.yahoo.com/quote/BND"
+      },
+      "tags": [{ "id": "mock-tag-retirement", "name": "Retirement" }],
+      "value": 20000,
+      "valueInBaseCurrency": 20000
+    },
+    {
+      "accountId": "mock-account-savings",
+      "comment": null,
+      "createdAt": "2023-01-10T00:00:00.000Z",
+      "date": "2023-01-10T00:00:00.000Z",
+      "fee": 2,
+      "id": "mock-activity-5",
+      "isDraft": false,
+      "quantity": 0.5,
+      "type": "BUY",
+      "unitPrice": 22000,
+      "updatedAt": "2023-01-10T00:00:00.000Z",
+      "Account": {
+        "id": "mock-account-savings",
+        "name": "Coinbase",
+        "Platform": {
+          "id": "mock-platform-coinbase",
+          "name": "Coinbase",
+          "url": "https://www.coinbase.com"
+        }
+      },
+      "SymbolProfile": {
+        "assetClass": "EQUITY",
+        "assetSubClass": "CRYPTOCURRENCY",
+        "comment": null,
+        "countries": [],
+        "currency": "USD",
+        "dataSource": "YAHOO",
+        "holdings": [],
+        "name": "Bitcoin USD",
+        "sectors": [],
+        "symbol": "BTC-USD",
+        "url": "https://finance.yahoo.com/quote/BTC-USD"
+      },
+      "tags": [{ "id": "mock-tag-crypto", "name": "Crypto" }],
+      "value": 11000,
+      "valueInBaseCurrency": 11000
+    },
+    {
+      "accountId": "mock-account-checking",
+      "comment": "Quarterly dividend",
+      "createdAt": "2023-03-15T00:00:00.000Z",
+      "date": "2023-03-15T00:00:00.000Z",
+      "fee": 0,
+      "id": "mock-activity-6",
+      "isDraft": false,
+      "quantity": 50,
+      "type": "DIVIDEND",
+      "unitPrice": 0.23,
+      "updatedAt": "2023-03-15T00:00:00.000Z",
+      "Account": {
+        "id": "mock-account-checking",
+        "name": "Interactive Brokers",
+        "Platform": {
+          "id": "mock-platform-ibkr",
+          "name": "Interactive Brokers",
+          "url": "https://www.interactivebrokers.com"
+        }
+      },
+      "SymbolProfile": {
+        "assetClass": "EQUITY",
+        "assetSubClass": "STOCK",
+        "comment": null,
+        "countries": [{ "code": "US", "continent": "North America", "name": "United States", "weight": 1 }],
+        "currency": "USD",
+        "dataSource": "YAHOO",
+        "holdings": [],
+        "name": "Apple Inc.",
+        "sectors": [{ "name": "Technology", "weight": 1 }],
+        "symbol": "AAPL",
+        "url": "https://finance.yahoo.com/quote/AAPL"
+      },
+      "tags": [],
+      "value": 11.5,
+      "valueInBaseCurrency": 11.5
+    },
+    {
+      "accountId": "mock-account-checking",
+      "comment": null,
+      "createdAt": "2023-05-20T00:00:00.000Z",
+      "date": "2023-05-20T00:00:00.000Z",
+      "fee": 1,
+      "id": "mock-activity-7",
+      "isDraft": false,
+      "quantity": 30,
+      "type": "BUY",
+      "unitPrice": 170,
+      "updatedAt": "2023-05-20T00:00:00.000Z",
+      "Account": {
+        "id": "mock-account-checking",
+        "name": "Interactive Brokers",
+        "Platform": {
+          "id": "mock-platform-ibkr",
+          "name": "Interactive Brokers",
+          "url": "https://www.interactivebrokers.com"
+        }
+      },
+      "SymbolProfile": {
+        "assetClass": "EQUITY",
+        "assetSubClass": "STOCK",
+        "comment": null,
+        "countries": [{ "code": "US", "continent": "North America", "name": "United States", "weight": 1 }],
+        "currency": "USD",
+        "dataSource": "YAHOO",
+        "holdings": [],
+        "name": "Microsoft Corporation",
+        "sectors": [{ "name": "Technology", "weight": 1 }],
+        "symbol": "MSFT",
+        "url": "https://finance.yahoo.com/quote/MSFT"
+      },
+      "tags": [{ "id": "mock-tag-us", "name": "US Stock" }],
+      "value": 5100,
+      "valueInBaseCurrency": 5100
+    },
+    {
+      "accountId": "mock-account-savings",
+      "comment": null,
+      "createdAt": "2023-08-05T00:00:00.000Z",
+      "date": "2023-08-05T00:00:00.000Z",
+      "fee": 1.5,
+      "id": "mock-activity-8",
+      "isDraft": false,
+      "quantity": 5,
+      "type": "BUY",
+      "unitPrice": 1800,
+      "updatedAt": "2023-08-05T00:00:00.000Z",
+      "Account": {
+        "id": "mock-account-savings",
+        "name": "Coinbase",
+        "Platform": {
+          "id": "mock-platform-coinbase",
+          "name": "Coinbase",
+          "url": "https://www.coinbase.com"
+        }
+      },
+      "SymbolProfile": {
+        "assetClass": "EQUITY",
+        "assetSubClass": "CRYPTOCURRENCY",
+        "comment": null,
+        "countries": [],
+        "currency": "USD",
+        "dataSource": "YAHOO",
+        "holdings": [],
+        "name": "Ethereum USD",
+        "sectors": [],
+        "symbol": "ETH-USD",
+        "url": "https://finance.yahoo.com/quote/ETH-USD"
+      },
+      "tags": [{ "id": "mock-tag-crypto", "name": "Crypto" }],
+      "value": 9000,
+      "valueInBaseCurrency": 9000
+    }
+  ],
+  "count": 8
+}

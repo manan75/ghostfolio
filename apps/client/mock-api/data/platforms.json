@@ -1,0 +1,9 @@
+{
+  "platforms": [
+    { "id": "mock-platform-ibkr", "name": "Interactive Brokers", "url": "https://www.interactivebrokers.com" },
+    { "id": "mock-platform-coinbase", "name": "Coinbase", "url": "https://www.coinbase.com" },
+    { "id": "mock-platform-schwab", "name": "Charles Schwab", "url": "https://www.schwab.com" },
+    { "id": "mock-platform-fidelity", "name": "Fidelity", "url": "https://www.fidelity.com" },
+    { "id": "mock-platform-robinhood", "name": "Robinhood", "url": "https://www.robinhood.com" }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "baseCurrency": "USD",
+  "benchmarks": [
+    {
+      "dataSource": "YAHOO",
+      "name": "S&P 500",
+      "symbol": "VOO"
+    }
+  ],
+  "currencies": [
+    "CHF",
+    "EUR",
+    "GBP",
+    "JPY",
+    "USD"
+  ],
+  "demoAuthToken": "mock-jwt-token",
+  "globalPermissions": [
+    "createAccess",
+    "createAccount",
+    "createOrder",
+    "createUserAccount",
+    "deleteAccess",
+    "deleteAccount",
+    "deleteOrder",
+    "deleteUser",
+    "enableBlog",
+    "enableFearAndGreedIndex",
+    "enableImport",
+    "enableSocialLogin",
+    "enableStatistics",
+    "enableSubscription",
+    "enableSystemMessage",
+    "readForeignPortfolio",
+    "updateAccount",
+    "updateOrder",
+    "updateUserSettings",
+    "updateViewMode"
+  ],
+  "statistics": {
+    "activeUsers1d": 42,
+    "activeUsers30d": 1337,
+    "dockerHubPulls": 500000,
+    "gitHubContributors": 200,
+    "gitHubStargazers": 15000,
+    "newUsers30d": 100,
+    "slackCommunityUsers": "5000",
+    "uptime": 99.9
+  },
+  "subscriptionOffer": {
+    "price": 99,
+    "priceId": "mock-price-id"
+  }
+}

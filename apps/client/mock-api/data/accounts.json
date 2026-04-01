@@ -1,0 +1,43 @@
+{
+  "accounts": [
+    {
+      "balance": 5000,
+      "currency": "USD",
+      "id": "mock-account-checking",
+      "isDefault": true,
+      "isExcluded": false,
+      "name": "Interactive Brokers",
+      "platformId": "mock-platform-ibkr",
+      "transactionCount": 18,
+      "value": 95000,
+      "valueInBaseCurrency": 95000,
+      "Platform": {
+        "id": "mock-platform-ibkr",
+        "name": "Interactive Brokers",
+        "url": "https://www.interactivebrokers.com"
+      }
+    },
+    {
+      "balance": 10000,
+      "currency": "USD",
+      "id": "mock-account-savings",
+      "isDefault": false,
+      "isExcluded": false,
+      "name": "Coinbase",
+      "platformId": "mock-platform-coinbase",
+      "transactionCount": 6,
+      "value": 25000,
+      "valueInBaseCurrency": 25000,
+      "Platform": {
+        "id": "mock-platform-coinbase",
+        "name": "Coinbase",
+        "url": "https://www.coinbase.com"
+      }
+    }
+  ],
+  "activitiesCount": 24,
+  "totalBalanceInBaseCurrency": 15000,
+  "totalDividendInBaseCurrency": 1250,
+  "totalInterestInBaseCurrency": 0,
+  "totalValueInBaseCurrency": 120000
+}

@@ -1,0 +1,91 @@
+{
+  "access": [],
+  "accounts": [
+    {
+      "balance": 5000,
+      "currency": "USD",
+      "id": "mock-account-checking",
+      "isDefault": true,
+      "isExcluded": false,
+      "name": "Interactive Brokers",
+      "platformId": "mock-platform-ibkr",
+      "Platform": {
+        "id": "mock-platform-ibkr",
+        "name": "Interactive Brokers",
+        "url": "https://www.interactivebrokers.com"
+      }
+    },
+    {
+      "balance": 10000,
+      "currency": "USD",
+      "id": "mock-account-savings",
+      "isDefault": false,
+      "isExcluded": false,
+      "name": "Coinbase",
+      "platformId": "mock-platform-coinbase",
+      "Platform": {
+        "id": "mock-platform-coinbase",
+        "name": "Coinbase",
+        "url": "https://www.coinbase.com"
+      }
+    }
+  ],
+  "activitiesCount": 24,
+  "dateOfFirstActivity": "2022-01-15T00:00:00.000Z",
+  "id": "mock-user-id",
+  "permissions": [
+    "createAccess",
+    "createAccount",
+    "createOrder",
+    "deleteAccess",
+    "deleteAccount",
+    "deleteOrder",
+    "deleteUser",
+    "enableFearAndGreedIndex",
+    "enableImport",
+    "readForeignPortfolio",
+    "updateAccount",
+    "updateOrder",
+    "updateUserSettings",
+    "updateViewMode",
+    "accessAdminControl",
+    "accessAssistant"
+  ],
+  "settings": {
+    "baseCurrency": "USD",
+    "colorScheme": "LIGHT",
+    "dateRange": "max",
+    "emergencyFund": 10000,
+    "holdingsViewMode": "DEFAULT",
+    "isExperimentalFeatures": false,
+    "isRestrictedView": false,
+    "language": "en",
+    "locale": "en-US",
+    "savingsRate": 500,
+    "viewMode": "DEFAULT"
+  },
+  "subscription": {
+    "offer": {
+      "price": 99,
+      "priceId": "mock-price-id"
+    },
+    "type": "Premium"
+  },
+  "tags": [
+    {
+      "id": "mock-tag-us",
+      "name": "US Stock",
+      "isUsed": true
+    },
+    {
+      "id": "mock-tag-crypto",
+      "name": "Crypto",
+      "isUsed": true
+    },
+    {
+      "id": "mock-tag-retirement",
+      "name": "Retirement",
+      "isUsed": true
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "date": "2024-01-15T00:00:00.000Z",
+    "version": "2.251.0"
+  },
+  "accounts": [
+    {
+      "balance": 5000,
+      "comment": null,
+      "currency": "USD",
+      "id": "mock-account-checking",
+      "isExcluded": false,
+      "name": "Interactive Brokers",
+      "platformId": "mock-platform-ibkr"
+    },
+    {
+      "balance": 10000,
+      "comment": null,
+      "currency": "USD",
+      "id": "mock-account-savings",
+      "isExcluded": false,
+      "name": "Coinbase",
+      "platformId": "mock-platform-coinbase"
+    }
+  ],
+  "activities": [
+    {
+      "accountId": "mock-account-checking",
+      "comment": null,
+      "date": "2022-01-15T00:00:00.000Z",
+      "fee": 1,
+      "quantity": 50,
+      "symbol": "AAPL",
+      "type": "BUY",
+      "unitPrice": 150
+    },
+    {
+      "accountId": "mock-account-checking",
+      "comment": null,
+      "date": "2022-03-10T00:00:00.000Z",
+      "fee": 1,
+      "quantity": 20,
+      "symbol": "VOO",
+      "type": "BUY",
+      "unitPrice": 400
+    },
+    {
+      "accountId": "mock-account-checking",
+      "comment": null,
+      "date": "2022-06-01T00:00:00.000Z",
+      "fee": 1,
+      "quantity": 100,
+      "symbol": "VEA",
+      "type": "BUY",
+      "unitPrice": 50
+    },
+    {
+      "accountId": "mock-account-checking",
+      "comment": null,
+      "date": "2022-09-15T00:00:00.000Z",
+      "fee": 1,
+      "quantity": 200,
+      "symbol": "BND",
+      "type": "BUY",
+      "unitPrice": 100
+    },
+    {
+      "accountId": "mock-account-savings",
+      "comment": null,
+      "date": "2023-01-10T00:00:00.000Z",
+      "fee": 2,
+      "quantity": 0.5,
+      "symbol": "BTC-USD",
+      "type": "BUY",
+      "unitPrice": 22000
+    },
+    {
+      "accountId": "mock-account-checking",
+      "comment": null,
+      "date": "2023-05-20T00:00:00.000Z",
+      "fee": 1,
+      "quantity": 30,
+      "symbol": "MSFT",
+      "type": "BUY",
+      "unitPrice": 170
+    },
+    {
+      "accountId": "mock-account-savings",
+      "comment": null,
+      "date": "2023-08-05T00:00:00.000Z",
+      "fee": 1.5,
+      "quantity": 5,
+      "symbol": "ETH-USD",
+      "type": "BUY",
+      "unitPrice": 1800
+    }
+  ]
+}

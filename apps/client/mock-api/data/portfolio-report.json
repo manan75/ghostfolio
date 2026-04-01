@@ -1,0 +1,62 @@
+{
+  "xRay": {
+    "categories": [
+      {
+        "key": "accounts",
+        "name": "Accounts",
+        "rules": [
+          {
+            "configuration": { "thresholdMax": 0.22 },
+            "isActive": true,
+            "key": "AccountClusterRisk:SingleAccount",
+            "name": "Single Account",
+            "value": false
+          }
+        ]
+      },
+      {
+        "key": "currencies",
+        "name": "Currencies",
+        "rules": [
+          {
+            "configuration": { "thresholdMax": 0.5 },
+            "isActive": true,
+            "key": "CurrencyClusterRisk:BaseCurrencyCurrentInvestment",
+            "name": "Investment in Base Currency",
+            "value": true
+          }
+        ]
+      },
+      {
+        "key": "emergency-fund",
+        "name": "Emergency Fund",
+        "rules": [
+          {
+            "configuration": { "thresholdMin": 10000 },
+            "isActive": true,
+            "key": "EmergencyFundSetup",
+            "name": "Emergency Fund Setup",
+            "value": true
+          }
+        ]
+      },
+      {
+        "key": "fees",
+        "name": "Fees",
+        "rules": [
+          {
+            "configuration": { "thresholdMax": 0.015 },
+            "isActive": true,
+            "key": "FeeRatioInitialInvestment",
+            "name": "Fee Ratio",
+            "value": true
+          }
+        ]
+      }
+    ],
+    "statistics": {
+      "rulesActiveCount": 4,
+      "rulesFulfilledCount": 3
+    }
+  }
+}

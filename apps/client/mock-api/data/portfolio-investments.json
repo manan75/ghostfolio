@@ -1,0 +1,15 @@
+{
+  "investments": [
+    { "date": "2022-01-15", "investment": 7500 },
+    { "date": "2022-03-10", "investment": 8000 },
+    { "date": "2022-06-01", "investment": 5000 },
+    { "date": "2022-09-15", "investment": 20000 },
+    { "date": "2023-01-10", "investment": 11000 },
+    { "date": "2023-05-20", "investment": 5100 },
+    { "date": "2023-08-05", "investment": 9000 }
+  ],
+  "streaks": {
+    "currentStreak": 3,
+    "longestStreak": 4
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "assetClass": "EQUITY",
+    "assetSubClass": "STOCK",
+    "currency": "USD",
+    "dataSource": "YAHOO",
+    "dateOfFirstActivity": null,
+    "name": "Tesla, Inc.",
+    "performances": {
+      "1d": { "relativeChange": -0.015 },
+      "5d": { "relativeChange": -0.032 },
+      "1m": { "relativeChange": 0.08 },
+      "3m": { "relativeChange": 0.15 },
+      "6m": { "relativeChange": -0.05 },
+      "ytd": { "relativeChange": -0.12 },
+      "1y": { "relativeChange": -0.08 },
+      "3y": { "relativeChange": -0.25 },
+      "5y": { "relativeChange": 0.5 },
+      "max": { "relativeChange": 1.2 }
+    },
+    "symbol": "TSLA"
+  },
+  {
+    "assetClass": "EQUITY",
+    "assetSubClass": "STOCK",
+    "currency": "USD",
+    "dataSource": "YAHOO",
+    "dateOfFirstActivity": null,
+    "name": "NVIDIA Corporation",
+    "performances": {
+      "1d": { "relativeChange": 0.025 },
+      "5d": { "relativeChange": 0.05 },
+      "1m": { "relativeChange": 0.12 },
+      "3m": { "relativeChange": 0.35 },
+      "6m": { "relativeChange": 0.55 },
+      "ytd": { "relativeChange": 0.42 },
+      "1y": { "relativeChange": 1.2 },
+      "3y": { "relativeChange": 3.5 },
+      "5y": { "relativeChange": 8.0 },
+      "max": { "relativeChange": 15.0 }
+    },
+    "symbol": "NVDA"
+  }
+]

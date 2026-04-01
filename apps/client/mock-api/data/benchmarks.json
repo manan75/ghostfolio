@@ -1,0 +1,22 @@
+{
+  "benchmarks": [
+    {
+      "dataSource": "YAHOO",
+      "marketCondition": "NEUTRAL_MARKET",
+      "name": "S&P 500",
+      "performances": {
+        "1d": { "relativeChange": 0.003 },
+        "5d": { "relativeChange": 0.012 },
+        "1m": { "relativeChange": 0.032 },
+        "3m": { "relativeChange": 0.08 },
+        "6m": { "relativeChange": 0.12 },
+        "ytd": { "relativeChange": 0.095 },
+        "1y": { "relativeChange": 0.22 },
+        "3y": { "relativeChange": 0.45 },
+        "5y": { "relativeChange": 0.85 },
+        "max": { "relativeChange": 1.5 }
+      },
+      "symbol": "VOO"
+    }
+  ]
+}
