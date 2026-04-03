@@ -14,7 +14,6 @@ RUN apt-get update && apt-get install -y --no-install-suggests \
 # Only add basic files without the application itself to avoid rebuilding
 # layers when files (package.json etc.) have not changed
 COPY ./.config .config/
-COPY ./CHANGELOG.md CHANGELOG.md
 COPY ./LICENSE LICENSE
 COPY ./package.json package.json
 COPY ./package-lock.json package-lock.json
