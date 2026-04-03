@@ -2212,7 +2212,7 @@ export class PortfolioService {
       } of ordersByAccount) {
         const currentValueOfSymbolInBaseCurrency =
           getFactor(type) *
-          (quantity as unknown as number) *
+          quantity.toNumber() *
           (portfolioItemsNow[SymbolProfile.symbol]?.marketPriceInBaseCurrency ??
             0);
 
