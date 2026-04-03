@@ -62,5 +62,7 @@ COPY --chown=node:node --from=builder /ghostfolio/dist/apps /ghostfolio/apps/
 COPY --chown=node:node ./docker/entrypoint.sh /ghostfolio/
 WORKDIR /ghostfolio/apps/api
 EXPOSE ${PORT:-3333}
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+  CMD curl -f http://localhost:${PORT:-3333}/api/v1/health || exit 1
 USER node
 CMD [ "/ghostfolio/entrypoint.sh" ]
