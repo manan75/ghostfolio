@@ -130,10 +130,10 @@ export class ImportService {
               activity.SymbolProfile.currency === assetProfile.currency &&
               activity.SymbolProfile.dataSource === assetProfile.dataSource &&
               isSameSecond(activity.date, date) &&
-              activity.quantity === quantity &&
+              activity.quantity.toNumber() === quantity &&
               activity.SymbolProfile.symbol === assetProfile.symbol &&
               activity.type === 'DIVIDEND' &&
-              activity.unitPrice === marketPrice
+              activity.unitPrice.toNumber() === marketPrice
             );
           });
 
@@ -145,14 +145,14 @@ export class ImportService {
             account,
             date,
             error,
-            quantity,
+            quantity: quantity as any,
             value,
             accountId: account?.id,
             accountUserId: undefined,
             comment: undefined,
             currency: undefined,
             createdAt: undefined,
-            fee: 0,
+            fee: 0 as any,
             feeInAssetProfileCurrency: 0,
             feeInBaseCurrency: 0,
             id: assetProfile.id,
@@ -160,7 +160,7 @@ export class ImportService {
             SymbolProfile: assetProfile,
             symbolProfileId: assetProfile.id,
             type: 'DIVIDEND',
-            unitPrice: marketPrice,
+            unitPrice: marketPrice as any,
             unitPriceInAssetProfileCurrency: marketPrice,
             updatedAt: undefined,
             userId: account?.userId,
@@ -588,7 +588,9 @@ export class ImportService {
         }
       }
 
-      const value = new Big(quantity).mul(unitPrice).toNumber();
+      const value = new Big(quantity as unknown as number)
+        .mul(unitPrice as unknown as number)
+        .toNumber();
 
       const valueInBaseCurrency = this.exchangeRateDataService.toCurrencyAtDate(
         value,
@@ -675,11 +677,11 @@ export class ImportService {
               activity.SymbolProfile.currency === currency) &&
             activity.SymbolProfile.dataSource === dataSource &&
             isSameSecond(activity.date, date) &&
-            activity.fee === fee &&
-            activity.quantity === quantity &&
+            activity.fee.toNumber() === fee &&
+            activity.quantity.toNumber() === quantity &&
             activity.SymbolProfile.symbol === symbol &&
             activity.type === type &&
-            activity.unitPrice === unitPrice
+            activity.unitPrice.toNumber() === unitPrice
           );
         });
 
@@ -693,10 +695,10 @@ export class ImportService {
           currency,
           date,
           error,
-          fee,
-          quantity,
+          fee: fee as any,
+          quantity: quantity as any,
           type,
-          unitPrice,
+          unitPrice: unitPrice as any,
           SymbolProfile: {
             dataSource,
             symbol,

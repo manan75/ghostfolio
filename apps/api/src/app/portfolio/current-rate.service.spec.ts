@@ -3,7 +3,7 @@ import { MarketDataService } from '@ghostfolio/api/services/market-data/market-d
 import { PropertyService } from '@ghostfolio/api/services/property/property.service';
 import { AssetProfileIdentifier } from '@ghostfolio/common/interfaces';
 
-import { DataSource, MarketData } from '@prisma/client';
+import { DataSource } from '@prisma/client';
 
 import { CurrentRateService } from './current-rate.service';
 import { DateQuery } from './interfaces/date-query.interface';
@@ -14,7 +14,7 @@ jest.mock('@ghostfolio/api/services/market-data/market-data.service', () => {
     MarketDataService: jest.fn().mockImplementation(() => {
       return {
         get: (date: Date, symbol: string) => {
-          return Promise.resolve<MarketData>({
+          return Promise.resolve<any>({
             date,
             symbol,
             createdAt: date,
@@ -33,7 +33,7 @@ jest.mock('@ghostfolio/api/services/market-data/market-data.service', () => {
           skip?: number;
           take?: number;
         }) => {
-          return Promise.resolve<MarketData[]>([
+          return Promise.resolve<any[]>([
             {
               createdAt: dateQuery.gte,
               dataSource: assetProfileIdentifiers[0].dataSource,

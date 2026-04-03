@@ -103,7 +103,7 @@ export class CurrentRateService {
         ...data.map(({ dataSource, date, marketPrice, symbol }) => ({
           dataSource,
           date,
-          marketPrice,
+          marketPrice: Number(marketPrice),
           symbol
         }))
       );
@@ -139,7 +139,7 @@ export class CurrentRateService {
               dataSource,
               symbol,
               date: today,
-              marketPrice: latestActivity?.unitPrice ?? 0
+              marketPrice: latestActivity?.unitPrice?.toNumber() ?? 0
             };
 
             response.values.push(value);

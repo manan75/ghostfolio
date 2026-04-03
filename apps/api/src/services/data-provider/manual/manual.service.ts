@@ -199,9 +199,11 @@ export class ManualService implements DataProviderInterface {
 
         marketPrice =
           marketPrice ??
-          marketData.find((marketDataItem) => {
-            return marketDataItem.symbol === symbol;
-          })?.marketPrice ??
+          marketData
+            .find((marketDataItem) => {
+              return marketDataItem.symbol === symbol;
+            })
+            ?.marketPrice?.toNumber() ??
           0;
 
         response[symbol] = {

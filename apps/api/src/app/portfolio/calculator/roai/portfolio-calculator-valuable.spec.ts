@@ -13,7 +13,6 @@ import { ExchangeRateDataService } from '@ghostfolio/api/services/exchange-rate-
 import { PortfolioSnapshotService } from '@ghostfolio/api/services/queues/portfolio-snapshot/portfolio-snapshot.service';
 import { PortfolioSnapshotServiceMock } from '@ghostfolio/api/services/queues/portfolio-snapshot/portfolio-snapshot.service.mock';
 import { parseDate } from '@ghostfolio/common/helper';
-import { Activity } from '@ghostfolio/common/interfaces';
 import { PerformanceCalculationType } from '@ghostfolio/common/types/performance-calculation-type.type';
 
 import { Big } from 'big.js';
@@ -82,7 +81,7 @@ describe('PortfolioCalculator', () => {
     it.only('with valuable activity', async () => {
       jest.useFakeTimers().setSystemTime(parseDate('2022-01-31').getTime());
 
-      const activities: Activity[] = [
+      const activities = [
         {
           ...activityDummyData,
           date: new Date('2022-01-01'),
@@ -102,7 +101,7 @@ describe('PortfolioCalculator', () => {
       ];
 
       const portfolioCalculator = portfolioCalculatorFactory.createCalculator({
-        activities,
+        activities: activities as any,
         calculationType: PerformanceCalculationType.ROAI,
         currency: 'USD',
         userId: userDummyData.id

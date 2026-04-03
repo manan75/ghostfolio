@@ -233,7 +233,7 @@ export class BenchmarkService {
       enableSharing
     });
 
-    const promisesAllTimeHighs: Promise<{ date: Date; marketPrice: number }>[] =
+    const promisesAllTimeHighs: Promise<{ date: Date; marketPrice: any }>[] =
       [];
     const promisesBenchmarkTrends: Promise<{
       trend50d: BenchmarkTrend;
@@ -271,7 +271,7 @@ export class BenchmarkService {
 
       if (allTimeHigh?.marketPrice && marketPrice) {
         performancePercentFromAllTimeHigh = this.calculateChangeInPercentage(
-          allTimeHigh.marketPrice,
+          allTimeHigh.marketPrice.toNumber(),
           marketPrice
         );
       } else {

@@ -175,7 +175,7 @@ export class AccountBalanceService {
           ...balance,
           accountId: balance.account.id,
           valueInBaseCurrency: this.exchangeRateDataService.toCurrency(
-            balance.value,
+            balance.value.toNumber(),
             balance.account.currency,
             userCurrency
           )

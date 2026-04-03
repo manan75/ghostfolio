@@ -196,7 +196,9 @@ export class PortfolioService {
             case ActivityType.DIVIDEND:
               dividendInBaseCurrency +=
                 await this.exchangeRateDataService.toCurrencyAtDate(
-                  new Big(quantity).mul(unitPrice).toNumber(),
+                  new Big(quantity.toNumber())
+                    .mul(unitPrice.toNumber())
+                    .toNumber(),
                   currency ?? SymbolProfile.currency,
                   userCurrency,
                   date
@@ -205,7 +207,7 @@ export class PortfolioService {
             case ActivityType.INTEREST:
               interestInBaseCurrency +=
                 await this.exchangeRateDataService.toCurrencyAtDate(
-                  unitPrice,
+                  unitPrice.toNumber(),
                   currency ?? SymbolProfile.currency,
                   userCurrency,
                   date
@@ -229,7 +231,7 @@ export class PortfolioService {
           valueInBaseCurrency,
           allocationInPercentage: 0,
           balanceInBaseCurrency: this.exchangeRateDataService.toCurrency(
-            account.balance,
+            account.balance.toNumber(),
             account.currency,
             userCurrency
           ),
@@ -933,7 +935,7 @@ export class PortfolioService {
         averagePrice: activitiesOfHolding[0].unitPriceInAssetProfileCurrency,
         date: dateOfFirstActivity,
         marketPrice: activitiesOfHolding[0].unitPriceInAssetProfileCurrency,
-        quantity: activitiesOfHolding[0].quantity
+        quantity: activitiesOfHolding[0].quantity.toNumber()
       });
     }
 
@@ -1536,7 +1538,7 @@ export class PortfolioService {
 
     for (const account of cashDetails.accounts) {
       const convertedBalance = this.exchangeRateDataService.toCurrency(
-        account.balance,
+        account.balance.toNumber(),
         account.currency,
         userCurrency
       );
@@ -2068,7 +2070,7 @@ export class PortfolioService {
         .map(({ currency, quantity, SymbolProfile, unitPrice }) => {
           return new Big(
             this.exchangeRateDataService.toCurrency(
-              new Big(quantity).mul(unitPrice).toNumber(),
+              new Big(quantity.toNumber()).mul(unitPrice.toNumber()).toNumber(),
               currency ?? SymbolProfile.currency,
               userCurrency
             )
@@ -2172,11 +2174,11 @@ export class PortfolioService {
       });
 
       accounts[account.id] = {
-        balance: account.balance,
+        balance: account.balance.toNumber(),
         currency: account.currency,
         name: account.name,
         valueInBaseCurrency: this.exchangeRateDataService.toCurrency(
-          account.balance,
+          account.balance.toNumber(),
           account.currency,
           userCurrency
         )
@@ -2185,17 +2187,17 @@ export class PortfolioService {
       if (platforms[account.platformId || UNKNOWN_KEY]?.valueInBaseCurrency) {
         platforms[account.platformId || UNKNOWN_KEY].valueInBaseCurrency +=
           this.exchangeRateDataService.toCurrency(
-            account.balance,
+            account.balance.toNumber(),
             account.currency,
             userCurrency
           );
       } else {
         platforms[account.platformId || UNKNOWN_KEY] = {
-          balance: account.balance,
+          balance: account.balance.toNumber(),
           currency: account.currency,
           name: account.platform?.name,
           valueInBaseCurrency: this.exchangeRateDataService.toCurrency(
-            account.balance,
+            account.balance.toNumber(),
             account.currency,
             userCurrency
           )
@@ -2210,7 +2212,7 @@ export class PortfolioService {
       } of ordersByAccount) {
         const currentValueOfSymbolInBaseCurrency =
           getFactor(type) *
-          quantity *
+          (quantity as unknown as number) *
           (portfolioItemsNow[SymbolProfile.symbol]?.marketPriceInBaseCurrency ??
             0);
 

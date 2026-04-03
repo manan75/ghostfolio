@@ -347,7 +347,7 @@ export class AdminService {
       for (const { dataSource, marketPrice, symbol } of lastMarketPrices) {
         lastMarketPriceMap.set(
           getAssetProfileIdentifier({ dataSource, symbol }),
-          marketPrice
+          marketPrice.toNumber()
         );
       }
 
@@ -785,7 +785,7 @@ export class AdminService {
     for (const { dataSource, marketPrice, symbol } of lastMarketPrices) {
       lastMarketPriceMap.set(
         getAssetProfileIdentifier({ dataSource, symbol }),
-        marketPrice
+        marketPrice.toNumber()
       );
     }
 

@@ -214,9 +214,9 @@ export class ActivitiesService {
     });
 
     if (updateAccountBalance === true) {
-      let amount = new Big(data.unitPrice)
-        .mul(data.quantity)
-        .plus(data.fee)
+      let amount = new Big(data.unitPrice as unknown as number)
+        .mul(data.quantity as unknown as number)
+        .plus(data.fee as unknown as number)
         .toNumber();
 
       if (['BUY', 'FEE'].includes(data.type)) {
@@ -383,12 +383,12 @@ export class ActivitiesService {
           createdAt: new Date(balanceItem.date),
           currency: account.currency,
           date: new Date(balanceItem.date),
-          fee: 0,
+          fee: 0 as any,
           feeInAssetProfileCurrency: 0,
           feeInBaseCurrency: 0,
           id: balanceItem.id,
           isDraft: false,
-          quantity: 1,
+          quantity: 1 as any,
           SymbolProfile: {
             activitiesCount: 0,
             assetClass: AssetClass.LIQUIDITY,
@@ -408,36 +408,36 @@ export class ActivitiesService {
           },
           symbolProfileId: account.currency,
           type: ActivityType.BUY,
-          unitPrice: 1,
+          unitPrice: 1 as any,
           unitPriceInAssetProfileCurrency: 1,
           updatedAt: new Date(balanceItem.date),
           valueInBaseCurrency: 0,
           value: 0
         };
 
-        if (currentBalance < balanceItem.value) {
+        if (currentBalance < Number(balanceItem.value)) {
           // BUY
           activities.push({
             ...syntheticActivityTemplate,
-            quantity: balanceItem.value - currentBalance,
+            quantity: (Number(balanceItem.value) - currentBalance) as any,
             type: ActivityType.BUY,
-            value: balanceItem.value - currentBalance,
+            value: Number(balanceItem.value) - currentBalance,
             valueInBaseCurrency:
               balanceItem.valueInBaseCurrency - currentBalanceInBaseCurrency
           });
-        } else if (currentBalance > balanceItem.value) {
+        } else if (currentBalance > Number(balanceItem.value)) {
           // SELL
           activities.push({
             ...syntheticActivityTemplate,
-            quantity: currentBalance - balanceItem.value,
+            quantity: (currentBalance - Number(balanceItem.value)) as any,
             type: ActivityType.SELL,
-            value: currentBalance - balanceItem.value,
+            value: currentBalance - Number(balanceItem.value),
             valueInBaseCurrency:
               currentBalanceInBaseCurrency - balanceItem.valueInBaseCurrency
           });
         }
 
-        currentBalance = balanceItem.value;
+        currentBalance = Number(balanceItem.value);
         currentBalanceInBaseCurrency = balanceItem.valueInBaseCurrency;
       }
     }
@@ -695,7 +695,9 @@ export class ActivitiesService {
           );
         });
 
-        const value = new Big(order.quantity).mul(order.unitPrice).toNumber();
+        const value = new Big(order.quantity.toNumber())
+          .mul(order.unitPrice.toNumber())
+          .toNumber();
 
         const [
           feeInAssetProfileCurrency,
@@ -704,19 +706,19 @@ export class ActivitiesService {
           valueInBaseCurrency
         ] = await Promise.all([
           this.exchangeRateDataService.toCurrencyAtDate(
-            order.fee,
+            order.fee.toNumber(),
             order.currency ?? order.SymbolProfile.currency,
             order.SymbolProfile.currency,
             order.date
           ),
           this.exchangeRateDataService.toCurrencyAtDate(
-            order.fee,
+            order.fee.toNumber(),
             order.currency ?? order.SymbolProfile.currency,
             userCurrency,
             order.date
           ),
           this.exchangeRateDataService.toCurrencyAtDate(
-            order.unitPrice,
+            order.unitPrice.toNumber(),
             order.currency ?? order.SymbolProfile.currency,
             order.SymbolProfile.currency,
             order.date

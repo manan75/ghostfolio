@@ -87,7 +87,10 @@ export class AccountService {
     });
 
     return accounts.map((account) => {
-      account = { ...account, balance: account.balances[0]?.value ?? 0 };
+      account = {
+        ...account,
+        balance: account.balances[0]?.value ?? new Prisma.Decimal(0)
+      };
 
       if (!isBalancesIncluded) {
         delete account.balances;
@@ -107,7 +110,7 @@ export class AccountService {
 
     await this.accountBalanceService.createOrUpdateAccountBalance({
       accountId: account.id,
-      balance: data.balance,
+      balance: data.balance as unknown as number,
       date: format(new Date(), DATE_FORMAT),
       userId: aUserId
     });
@@ -204,7 +207,7 @@ export class AccountService {
     for (const account of accounts) {
       totalCashBalanceInBaseCurrency = totalCashBalanceInBaseCurrency.plus(
         this.exchangeRateDataService.toCurrency(
-          account.balance,
+          account.balance.toNumber(),
           account.currency,
           currency
         )
@@ -228,7 +231,7 @@ export class AccountService {
 
     await this.accountBalanceService.createOrUpdateAccountBalance({
       accountId: data.id as string,
-      balance: data.balance as number,
+      balance: data.balance as unknown as number,
       date: format(new Date(), DATE_FORMAT),
       userId: aUserId
     });
@@ -280,7 +283,9 @@ export class AccountService {
       await this.accountBalanceService.createOrUpdateAccountBalance({
         accountId,
         userId,
-        balance: new Big(balance).plus(amountInCurrencyOfAccount).toNumber(),
+        balance: new Big(balance.toNumber())
+          .plus(amountInCurrencyOfAccount)
+          .toNumber(),
         date: date.toISOString()
       });
     }

@@ -14,7 +14,7 @@ import { ExchangeRateDataService } from '@ghostfolio/api/services/exchange-rate-
 import { PortfolioSnapshotService } from '@ghostfolio/api/services/queues/portfolio-snapshot/portfolio-snapshot.service';
 import { PortfolioSnapshotServiceMock } from '@ghostfolio/api/services/queues/portfolio-snapshot/portfolio-snapshot.service.mock';
 import { parseDate } from '@ghostfolio/common/helper';
-import { Activity, ExportResponse } from '@ghostfolio/common/interfaces';
+import { ExportResponse } from '@ghostfolio/common/interfaces';
 import { PerformanceCalculationType } from '@ghostfolio/common/types/performance-calculation-type.type';
 
 import { Big } from 'big.js';
@@ -95,26 +95,24 @@ describe('PortfolioCalculator', () => {
     it.only('with NOVN.SW buy and sell', async () => {
       jest.useFakeTimers().setSystemTime(parseDate('2022-04-11').getTime());
 
-      const activities: Activity[] = exportResponse.activities.map(
-        (activity) => ({
-          ...activityDummyData,
-          ...activity,
-          date: parseDate(activity.date),
-          feeInAssetProfileCurrency: activity.fee,
-          feeInBaseCurrency: activity.fee,
-          SymbolProfile: {
-            ...symbolProfileDummyData,
-            currency: activity.currency,
-            dataSource: activity.dataSource,
-            name: 'Novartis AG',
-            symbol: activity.symbol
-          },
-          unitPriceInAssetProfileCurrency: activity.unitPrice
-        })
-      );
+      const activities = exportResponse.activities.map((activity) => ({
+        ...activityDummyData,
+        ...activity,
+        date: parseDate(activity.date),
+        feeInAssetProfileCurrency: activity.fee,
+        feeInBaseCurrency: activity.fee,
+        SymbolProfile: {
+          ...symbolProfileDummyData,
+          currency: activity.currency,
+          dataSource: activity.dataSource,
+          name: 'Novartis AG',
+          symbol: activity.symbol
+        },
+        unitPriceInAssetProfileCurrency: activity.unitPrice
+      }));
 
       const portfolioCalculator = portfolioCalculatorFactory.createCalculator({
-        activities,
+        activities: activities as any,
         calculationType: PerformanceCalculationType.ROAI,
         currency: exportResponse.user.settings.currency,
         userId: userDummyData.id

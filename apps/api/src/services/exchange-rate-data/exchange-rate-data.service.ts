@@ -295,7 +295,7 @@ export class ExchangeRateDataService {
       });
 
       if (marketData?.marketPrice) {
-        factor = marketData?.marketPrice;
+        factor = marketData?.marketPrice?.toNumber();
       } else {
         // Calculate indirectly via base currency
 
@@ -312,7 +312,7 @@ export class ExchangeRateDataService {
                 date: aDate,
                 symbol: `${DEFAULT_CURRENCY}${aFromCurrency}`
               })
-            )?.marketPrice;
+            )?.marketPrice?.toNumber();
           }
         } catch {}
 
@@ -326,7 +326,7 @@ export class ExchangeRateDataService {
                 date: aDate,
                 symbol: `${DEFAULT_CURRENCY}${aToCurrency}`
               })
-            )?.marketPrice;
+            )?.marketPrice?.toNumber();
           }
         } catch {}
 
@@ -400,7 +400,7 @@ export class ExchangeRateDataService {
 
     if (marketData?.length > 0) {
       for (const { date, marketPrice } of marketData) {
-        factors[format(date, DATE_FORMAT)] = marketPrice;
+        factors[format(date, DATE_FORMAT)] = marketPrice.toNumber();
       }
     } else {
       // Calculate indirectly via base currency
@@ -430,7 +430,7 @@ export class ExchangeRateDataService {
 
           for (const { date, marketPrice } of marketData) {
             marketPriceBaseCurrencyFromCurrency[format(date, DATE_FORMAT)] =
-              marketPrice;
+              marketPrice.toNumber();
           }
         }
       } catch {}
@@ -456,7 +456,7 @@ export class ExchangeRateDataService {
 
           for (const { date, marketPrice } of marketData) {
             marketPriceBaseCurrencyToCurrency[format(date, DATE_FORMAT)] =
-              marketPrice;
+              marketPrice.toNumber();
           }
         }
       } catch {}

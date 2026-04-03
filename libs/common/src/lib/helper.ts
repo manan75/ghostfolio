@@ -56,14 +56,14 @@ export function calculateBenchmarkTrend({
   const recentPeriodAverage = calculateMovingAverage({
     days,
     prices: historicalData.slice(0, days).map(({ marketPrice }) => {
-      return new Big(marketPrice);
+      return new Big(marketPrice.toNumber());
     })
   });
 
   const pastPeriodAverage = calculateMovingAverage({
     days,
     prices: historicalData.slice(days, 2 * days).map(({ marketPrice }) => {
-      return new Big(marketPrice);
+      return new Big(marketPrice.toNumber());
     })
   });
 

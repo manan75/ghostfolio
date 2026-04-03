@@ -14,7 +14,6 @@ import { ExchangeRateDataServiceMock } from '@ghostfolio/api/services/exchange-r
 import { PortfolioSnapshotService } from '@ghostfolio/api/services/queues/portfolio-snapshot/portfolio-snapshot.service';
 import { PortfolioSnapshotServiceMock } from '@ghostfolio/api/services/queues/portfolio-snapshot/portfolio-snapshot.service.mock';
 import { parseDate } from '@ghostfolio/common/helper';
-import { Activity } from '@ghostfolio/common/interfaces';
 import { PerformanceCalculationType } from '@ghostfolio/common/types/performance-calculation-type.type';
 
 import { Big } from 'big.js';
@@ -94,7 +93,7 @@ describe('PortfolioCalculator', () => {
     it.only('with GOOGL buy', async () => {
       jest.useFakeTimers().setSystemTime(parseDate('2023-07-10').getTime());
 
-      const activities: Activity[] = [
+      const activities = [
         {
           ...activityDummyData,
           date: new Date('2023-01-03'),
@@ -114,7 +113,7 @@ describe('PortfolioCalculator', () => {
       ];
 
       const portfolioCalculator = portfolioCalculatorFactory.createCalculator({
-        activities,
+        activities: activities as any,
         calculationType: PerformanceCalculationType.ROAI,
         currency: 'CHF',
         userId: userDummyData.id

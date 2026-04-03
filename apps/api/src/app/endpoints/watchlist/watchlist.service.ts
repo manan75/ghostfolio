@@ -126,7 +126,7 @@ export class WatchlistService {
 
         const performancePercent =
           this.benchmarkService.calculateChangeInPercentage(
-            allTimeHigh?.marketPrice,
+            allTimeHigh?.marketPrice?.toNumber(),
             quotes[symbol]?.marketPrice
           );
 

@@ -208,7 +208,7 @@ export class AccountController {
       );
     }
 
-    if (accountFrom.balance < balance) {
+    if (accountFrom.balance.toNumber() < balance) {
       throw new HttpException(
         getReasonPhrase(StatusCodes.BAD_REQUEST),
         StatusCodes.BAD_REQUEST

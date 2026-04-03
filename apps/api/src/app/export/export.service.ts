@@ -100,9 +100,9 @@ export class ExportService {
           }
 
           return {
-            balance,
+            balance: balance.toNumber() as any,
             balances: balances.map(({ date, value }) => {
-              return { date: date.toISOString(), value };
+              return { date: date.toISOString(), value: value.toNumber() };
             }),
             comment,
             currency,
@@ -136,7 +136,7 @@ export class ExportService {
             })
           ).map(({ date, marketPrice }) => ({
             date: date.toISOString(),
-            marketPrice
+            marketPrice: marketPrice.toNumber()
           }));
 
           return [id, marketData] as const;
@@ -227,11 +227,11 @@ export class ExportService {
           return {
             accountId,
             comment,
-            fee,
+            fee: fee.toNumber() as any,
             id,
-            quantity,
+            quantity: quantity.toNumber() as any,
             type,
-            unitPrice,
+            unitPrice: unitPrice.toNumber() as any,
             currency: currency ?? SymbolProfile.currency,
             dataSource: SymbolProfile.dataSource,
             date: date.toISOString(),

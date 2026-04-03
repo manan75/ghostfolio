@@ -148,14 +148,14 @@ describe('PortfolioCalculator', () => {
               accountId,
               id: randomUUID(),
               date: parseDate('2023-12-31'),
-              value: 1000,
+              value: 1000 as any,
               valueInBaseCurrency: 850
             },
             {
               accountId,
               id: randomUUID(),
               date: parseDate('2024-12-31'),
-              value: 2000,
+              value: 2000 as any,
               valueInBaseCurrency: 1800
             }
           ]
@@ -164,7 +164,7 @@ describe('PortfolioCalculator', () => {
       jest.spyOn(accountService, 'getCashDetails').mockResolvedValue({
         accounts: [
           {
-            balance: 2000,
+            balance: 2000 as any,
             comment: null,
             createdAt: parseDate('2023-12-31'),
             currency: 'USD',
@@ -209,7 +209,7 @@ describe('PortfolioCalculator', () => {
 
       const portfolioCalculator = portfolioCalculatorFactory.createCalculator({
         accountBalanceItems,
-        activities,
+        activities: activities as any,
         calculationType: PerformanceCalculationType.ROAI,
         currency: 'CHF',
         userId: userDummyData.id

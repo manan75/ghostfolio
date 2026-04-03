@@ -48,9 +48,9 @@ export class SymbolService {
           dateQuery: { gte: subDays(new Date(), days) }
         });
 
-        historicalData = marketData.map(({ date, marketPrice: value }) => {
+        historicalData = marketData.map(({ date, marketPrice }) => {
           return {
-            value,
+            value: marketPrice.toNumber(),
             date: date.toISOString()
           };
         });

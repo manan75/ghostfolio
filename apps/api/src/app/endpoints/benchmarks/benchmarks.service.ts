@@ -91,9 +91,11 @@ export class BenchmarksService {
         format(startDate, DATE_FORMAT)
       ];
 
-    const marketPriceAtStartDate = marketDataItems?.find(({ date }) => {
-      return isSameDay(date, startDate);
-    })?.marketPrice;
+    const marketPriceAtStartDate = marketDataItems
+      ?.find(({ date }) => {
+        return isSameDay(date, startDate);
+      })
+      ?.marketPrice?.toNumber();
 
     if (!marketPriceAtStartDate) {
       Logger.error(
@@ -125,7 +127,7 @@ export class BenchmarksService {
             ? 0
             : this.benchmarkService.calculateChangeInPercentage(
                 marketPriceAtStartDate,
-                marketDataItem.marketPrice * exchangeRateFactor
+                marketDataItem.marketPrice.toNumber() * exchangeRateFactor
               ) * 100
       });
     }
@@ -151,7 +153,7 @@ export class BenchmarksService {
         value:
           this.benchmarkService.calculateChangeInPercentage(
             marketPriceAtStartDate,
-            currentSymbolItem.marketPrice * exchangeRateFactor
+            (currentSymbolItem.marketPrice * exchangeRateFactor) as number
           ) * 100
       });
     }
