@@ -59,11 +59,16 @@ export class CronService {
 
   @Cron(CronExpression.EVERY_DAY_AT_1AM)
   public async runEveryDayAtOneAm() {
-    try {
-      await this.backupService.createBackup();
-      this.backupService.cleanUpOldBackups();
-    } catch (error) {
-      Logger.error(`Automated backup failed: ${error.message}`, 'CronService');
+    if (this.configurationService.get('ENABLE_FEATURE_BACKUP')) {
+      try {
+        await this.backupService.createBackup();
+        this.backupService.cleanUpOldBackups();
+      } catch (error) {
+        Logger.error(
+          `Automated backup failed: ${error.message}`,
+          'CronService'
+        );
+      }
     }
   }
 

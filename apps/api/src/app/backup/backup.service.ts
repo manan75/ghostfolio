@@ -184,13 +184,13 @@ export class BackupService {
 
   private getBackupPath(): string {
     return (
-      this.configurationService.get('BACKUP_PATH') || this.DEFAULT_BACKUP_PATH
+      this.configurationService.get('BACKUP_PATH') ?? this.DEFAULT_BACKUP_PATH
     );
   }
 
   private getRetentionDays(): number {
     return (
-      this.configurationService.get('BACKUP_RETENTION_DAYS') ||
+      this.configurationService.get('BACKUP_RETENTION_DAYS') ??
       this.DEFAULT_RETENTION_DAYS
     );
   }
